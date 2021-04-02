@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Chlorinar';
+  src: url('fonts/Chlorinar/Chlorinard41d.html?#iefix') format('embedded-opentype'),  url('fonts/Chlorinar/Chlorinar.html') format('woff'), url('fonts/Chlorinar/Chlorinar-2.html')  format('truetype'), url('Chlorinar.html#Chlorinar') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Doctor Jekyll NF';
+    src: url('fonts/Doctor%20Jekyll%20NF/DoctorJekyllNF.woff2') format('woff2'),
+        url('fonts/Doctor%20Jekyll%20NF/DoctorJekyllNF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Solveig Display';
+    src: url('fonts/Solveig%20Display/SolveigDisplay.woff2') format('woff2'),
+        url('fonts/Solveig%20Display/SolveigDisplay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avrile Serif';
+    src: url('fonts/Avrile%20Serif/AvrileSerif-Black.html') format('woff2'),
+        url('fonts/Avrile%20Serif/AvrileSerif-Black-2.html') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+.about_head{
+	font-family : Doctor Jekyll NF;
+	font-size:30px;
+	text-align:center;
+
+	
+	
+}
+
+.about_body{
+	height:auto;
+	display:block;
+	padding: 30px;
+	text-align: justify;
+}
+
+.about_content{
+	font-size: 20px;
+	font-family: Solveig Display;
+}
+
+
+
+	
+.about_table{
+	font-weight: bold;
+	font-family : Solveig Display;
+	height:250px;
+	width:75%;
+	 table-layout: fixed;
+    
+	}
+.about_table th{
+	width: 200px;
+	font-size:30px;
+}
+
+
+.about_table td{
+	cellspacing=15;
+	}

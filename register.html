@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title ></title>
+    <meta charset="UTF-8" />
+     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="Style/register.css" />
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+ 
+    <script src="Scripts/jquery-3.3.1.js"></script>
+	<script src="Scripts/register.js"></script>
+
+</head>
+<body>
+	<nav id="tr-nav-wrapper">
+        <div id="tr-nav-placeholder">
+          <div id="tr-title">ARCVIL 1.0</div>
+            <ul id="tr-nav-content">
+                <li data-target="tr-header-wrapper"><a href="index.html"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="tr-content-wrapper">
+    	<div id="tr-form-wrapper">
+    		<span id="dead-line-warning">
+    			Hurry!.. Registration closing date:  30/10/2018
+    		</span>
+   			<span id="tr-form-title">
+   				<h2>
+					REGISTER
+   				</h2>
+                <marquee><a href="Event%20rules.pdf" download >General instructions</a></marquee>
+
+   			</span>
+    		<form id="tr-registration-form" onSubmit="return Validate()" action="http://www.techkranti.sngcet.org/reg_save.php" method="post">
+    			<div class="row">
+    				<div class="column-1">
+    					<span class="label">Name</span>
+    					<input  id="register_name" type="text" />
+    					<span class="register_error" id="name_error"><code><br></code></span>
+    				</div>
+    				<div class="column-1">
+    					<span class="label">Name</span>
+    					<input id="form_email" type="text" placeholder="example@gmail.com" name="eml"/>
+    					<span class="register_error" id="email_error"><code><br></code></span>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<div class="column-1">
+    					<span class="label">Gender</span>
+						<ul class="list-items">
+							<li><input id="gender-male" type="radio" name="gender" value="MALE" /> MALE</li>
+							<li><input id="gender-female" type="radio" name="gender" value="FEMALE" /> FEMALE</li>
+						</ul>
+						<span class="register_error" id="gender_error"><code><br></code></span>
+    				</div>
+    				<div class="column-1">
+    					<span class="label">Contact Number</span>
+    					<input id="phone-number" type="text" placeholder="mobile number" name="pn" />
+    					<span class="register_error" id="contact_error"><code><br></code></span>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<div class="column-1">
+    					<span class="label">Name of the Institute</span>
+    					<input id="institute-name" type="text" name="in"/>
+    					<span class="register_error" id="institute_error"><code><br></code></span>
+    				</div>
+    				<div class="column-1">
+    					<span class="label">Department</span>
+    					<input id="department-name" type="text" placeholder="branch of study" name="bos"/>
+    					<span class="register_error" id="department_error"><code><br></code></span>
+    				</div>
+    			</div>
+    			<!-- <div class="row">
+    				<div class="column-1">
+						<span class="label">Team Member</span>
+    					<input id="team-member-name" type="text" placeholder="[if any..]"/>
+    				</div>
+    			</div> -->
+    			<div class="row">
+    				<div class="column-1">
+    					<span class="label">How did you came to know about Arcvil ?</span>
+    					<input id="reference" type="text" placeholder="[officials/online/name if any/etc...]" name="abt"/>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<div class="column-1">
+    					<span class="label">Need for Accomodation</span>
+						<ul class="list-items">
+							<li><input id="accomodation-true" type="radio" name="accomodation" value="YES"  /> YES</li>
+							<li><input id="accomodation-false" type="radio" name="accomodation" value="NO"/> NO</li>
+                            <span class="register_error" id="acc_error"><code><br></code></span>
+						</ul>
+    				</div>
+    				<div class="column-1">
+						<span class="label">Preferred Food</span>
+						<ul class="list-items">
+							<li><input id="food-veg" type="radio" name="preferred_food" value="VEG" /> VEG</li>
+							<li><input id="food-non-veg" type="radio" name="preferred_food" value="NON-VEG" /> NON-VEG</li>
+							<span class="register_error" id="food_error"><code><br></code></span>
+						</ul>
+    				</div>
+    			</div>
+    			<div class="row">
+    			</div>
+    			<fieldset>
+    			<div class="row">
+    				<div class="column-1">
+    					<div id="price-tag">
+    						<span><input type="text" id="price" name="total" class="num" size="6" value="0" readonly /></span>
+    					</div>
+                        <span class="label">Participating in</span>
+                        <marquee><span class="important-instruction">OFFER VALID FOR PARTICIPATION IN 4 OR MORE EVENTS!</span></marquee>
+                        <span class="label">First day(Registration fee RS 200) </span>
+						<ul id="tr-event-select" >
+							
+							<!-- <li><input type="checkbox" id="0"  name="AAVISHKAAR" value="AAVISHKAAR" /> AAVISHKAAR</li> -->
+                            <li><input type="checkbox" id="ARCADEARCADE" name="day-1-event" value="200" /> ARCADE</li>
+                            <br>
+                            <br>
+                            <br>
+                            <span class="label">Second day(Registration fee RS 200)</span>
+							<li><input type="checkbox" id="COLLOQUIUM" name="day-2-event" value="200" /> COLLOQUIUM</li>
+                            <li><input type="checkbox" id="QUIZZARD"  name="day-2-event" value="200" /> QUIZZARD</li>
+                            <li><input type="checkbox" id="TALAASH" name="day-2-event" value="200" /> TALAASH</li>
+                            <li><input type="checkbox" id="CADATHON"  name="day-2-event" value="200" /> CADATHON</li>
+							
+						</ul>
+    				</div>
+    			</div>
+    		</fieldset>
+    			<div class="row">
+    				<div class="column">
+    					<input  type="submit" value="REGISTER"  />
+    				</div>
+    			</div>
+                
+    		</form>
+    	</div>
+    </section>
+    <footer id="tr-footer">
+   			<p>&copy; Arcvil 1.0</p>
+   	</footer>
+</body>
+
+
+</html>

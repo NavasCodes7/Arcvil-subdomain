@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <title >ARCVIL 1.0</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	<link rel="stylesheet" href="Style/about.css" />
+    <link rel="stylesheet" href="Style/index.css" />
+    <link rel="stylesheet" href="Style/modelbox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800|Clicker+Script' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+
+    
+    
+
+
+
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+	<script src="../cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="Scripts/underscore-min.js"></script>
+    <script src="Scripts/index.js"></script>
+</head>
+<body>
+    <nav id="tr-nav-wrapper">
+        <div id="tr-nav-placeholder">
+               <ul id="tr-nav-content">
+                 <li data-target="tr-header-wrapper"><a href="#"><em class="fa fa-home"></em> Home</a></li>
+                 <li data-target="tr-event-heading"><a href="#"><i class="fa fa-trophy"></i>&nbsp;Events</a></li>
+                <li><a href="register.html"><i class="fa fa-user-plus"></i>&nbsp;Register</a></li>
+                <li data-target="about"><a href="#"><em class="fa fa-info-circle"></em> About</a></li>
+                <li data-target="tr-footer"><a href="#"><i class="fa fa-phone"></i>&nbsp;Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header id="tr-header-wrapper" class="large-header">
+      	<canvas id="demo-canvas"> </canvas>
+<!--         <div id="tr-title" class="main-title">
+        	ARCVIL&nbsp;1.0
+        </div> -->
+        <div class="main-example">
+            <div class="countdown-container" id="main-example">
+           
+        </div>
+
+
+
+        <script type="text/template" id="main-example-template">
+			<div class="time <%= label %>">
+			  <span class="count curr top"><%= curr %></span>
+			  <span class="count next top"><%= next %></span>
+			  <span class="count next bottom"><%= next %></span>
+			  <span class="count curr bottom"><%= curr %></span>
+			  <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+			</div>
+		</script>
+		<script src="Scripts/jquery.countdown.min.js"></script>
+        </div>
+    </div>
+    </div>
+    </header>
+
+
+		<script src="Scripts/rAF.js"></script>	
+		<script src="Scripts/demo-2.js"></script>
+
+
+		<section >
+
+			<svg class="hidden">
+					
+			<symbol id="icon-cross" viewBox="0 0 24 23">
+				<title>cross</title>
+				<path d="M23.865 3.677c.197-.383.164-.818-.008-1.18.048-.41-.06-.827-.448-1.147L22.323.457c-.636-.524-1.632-.689-2.25 0a155.348 155.348 0 0 1-8.797 9.001C9.011 7.342 6.72 5.255 4.443 3.165c-.8-.734-1.956-.503-2.458.37C1.253 3.9.659 4.374.168 5.182c-.233.386-.215.872 0 1.258 1.47 2.635 4.31 4.951 6.646 7.083-.313.28-.623.562-.942.836-3.146 2.702-5.268 4.416-1.331 7.187.053.037.107.029.161.05.076.036.148.06.232.074.026 0 .05.005.075.003.082.007.16.027.243.011 2.117-.415 4.085-2.074 5.872-3.9 1.74 1.715 3.592 3.353 5.63 4.325.485.232 1.063.097 1.436-.227.626.047 1.197-.342 1.484-.901.042-.026.07-.041.116-.07.91-.569.993-1.701.32-2.482-1.522-1.762-3.138-3.438-4.787-5.084 2.968-2.9 6.674-6.027 8.542-9.667z"/>
+			</symbol>
+		</svg>
+
+			<main>
+				<div class="content">
+					<header class="codrops-header">
+					<p id="tr-event-heading"">Events</p>
+				</header>
+				</div>
+
+				<div class="content">
+					<div class="grid">
+					<a class="grid__item" href="#preview-1">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/Aavishkaar.jpg" alt="Some image"/>
+							
+							<h4 class="box__text"><span class="box__text-inner">Aavishkaar</span></h4>
+							<div class="box__deco">&#10014;</div>
+							<p class="box__content">Awe inspiring expo of creativity</p>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-2">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/Qwizard.jpg" alt="Some image"/>
+							
+							<p class="box__content">Come, Quiz, Conquer</p>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated1">Qwizard</span></h4>
+							<div class="box__deco box__deco--top">&#10115;</div>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-3">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/talash.jpg" alt="Some image"/>
+							
+							<p class="box__content">Be the detective and unleash the treasure</p>
+							<h4 class="box__text box__text--topcloser"><span class="box__text-inner">Talaash</span></h4>
+							<div class="box__deco">&#10032;</div>
+						</div>
+					</a>
+					
+					<a class="grid__item" href="#preview-4">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/Cadathon.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Catch">CAD</span></h3>
+							<p class="box__content">Visualize your ideas with CAD</p>
+							
+							<h4 class="box__text box__text--topcloser"><span class="box__text-inner">Cadathon</span></h4>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-5">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/Ar.jpg" alt="Some image"/>
+							
+							<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Arcade</span></h4>
+							<p class="box__content">Construct and contest</p>
+						</div>
+					</a>
+					
+					<a class="grid__item" href="#preview-6">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/ccc.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Hard">Explore</span></h3>
+							<h4 class="box__text"><span class="box__text-inner">Colloquium</span></h4>
+							<p class="box__content">A technical seminar on recent advancement in Civil Engineering</p>
+						</div>
+					</a>
+				<!--
+					<a class="grid__item" href="#preview-7">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/8.jpg" alt="Some image"/>
+							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Red">Red</span></h3>
+							<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Life</span></h4>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-8">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/4.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Jack">Jack</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">Bust</span></h4>
+							<div class="box__deco">&#10108;</div>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-9">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/10.jpg" alt="Some image"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="Wild">Wild</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">Zack</span></h4>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-10">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/11.jpg" alt="Some image"/>
+							<h3 class="box__title box__title--bottom"><span class="box__title-inner" data-hover="Lost">Lost</span></h3>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Rust</span></h4>
+							<p class="box__content">"Call it a hurricane or call it freedom, Frank"</p>
+						</div>
+					</a>
+					<a class="grid__item" href="#preview-11">
+						<div class="box">
+							<div class="box__shadow"></div>
+							<img class="box__img" src="img/12.jpg" alt="Some image"/>
+							<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner" data-hover="Grit">Grit</span></h3>
+							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Mud</span></h4>
+							<div class="box__deco box__deco--top">&#10153;</div>
+						</div>
+					</a>
+
+				-->
+				</div>
+				</div>
+				<div class="overlay">
+				<div class="overlay__reveal"></div>
+				<div class="overlay__item" id="preview-1">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/Aavishkaar.jpg" alt="Some image"/>
+					<!--	<h3 class="box__title"><span class="box__title-inner">some</span></h3> -->
+						<h4 class="box__text"><span class="box__text-inner">Aavishkaar</span></h4>
+						<div class="box__deco">&#10014;</div>
+					</div>
+					<p class="overlay__content"> Mind blowing show of the Civil Engineers ARTWORK.
+							
+					</p>
+				</div>
+				<div class="overlay__item" id="preview-2">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/Qwizard.jpg" alt="Some image"/>
+						
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Qwizard</span></h4>
+						<div class="box__deco box__deco--top">&#10115;</div>
+					</div>
+					<p class="overlay__content">Come, Quiz, Conquer
+							<ul>
+								<li>Individual event</li>
+		              	<li>The event will be conducted as <span class="bold">two stages</span><span class="asteric">*</span></li>
+		              	<ul>
+		              		<li>Round 1 : Aptitude test</li> 
+		              		<li>Round 2 : Oral Quiz</li>
+		              	</ul>
+		              	<li>Each participant will get <span class="bold">40 points.(40+ points for winners)</span></li>
+		              	<li>Questions will be based on verbal ability, numerical reasoning, basic engineering, technical General knowledge.</li>
+		              	<li>Students from all departments can participate.</li>
+		       
+		              </ul>
+					</p>
+				</div>
+				<div class="overlay__item" id="preview-3">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/talash.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Hunt</span></h3>
+						<h4 class="box__text box__text--topcloser"><span class="box__text-inner">Talaash</span></h4>
+						<div class="box__deco">&#10032;</div>
+					</div>
+					<p class="overlay__content">Search for the hidden object by following a trial of clues.
+							<ul>
+		              	<li>Each group can contain two participants</li>
+		              	<li>Attractive prizes for winners.</li>
+
+		       
+		              </ul>
+					</p>
+				</div>
+				<div class="overlay__item" id="preview-4">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/Cadathon.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">CAD</span></h3>
+						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Cadathon</span></h4>
+					</div>
+					<p class="overlay__content">Heres an opportunity for you to express your talents in CADD drawing.
+						<ul>
+		              	<li>Individual participation.</li>
+		              	<li>Maximum time for completion is 1 hour.</li>
+		              	<li><b>40</b> KTU points for participation.</li>
+
+		       
+		              </ul>
+					</p>
+				</div>
+
+				<div class="overlay__item" id="preview-5">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/Ar.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Contest</span></h3>
+						<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Arcade</span></h4>
+					</div>
+					<p class="overlay__content">Head over here to have technical games and win attractive prizes.
+
+							<ul>
+		              	<li>Each group can contain two participants</li>
+		              	<li>Maximum time for completion is <b>3 hour</b>.</li>
+		              	<li><b>40</b> KTU points for participation.</li>
+
+		       
+		              </ul>
+					</p>
+				</div>
+		
+				<div class="overlay__item" id="preview-6">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/ccc.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Explore</span></h3>
+						<h4 class="box__text"><span class="box__text-inner">Colloquium</span></h4>
+					</div>
+					<p class="overlay__content">
+						<ul>
+							<li>Topic : <b>Recent trends in Civil Engineering</b>.</li>
+						<li>A team shall consist of maximum <b>four persons</b>.</li>
+<li>At the time of presentation the candidates should have the soft copy of powerpoint presentation and two hard copies and one soft copy of full base paper.</li>
+</li>Team can bring their soft Copies in CD or pen drive.</li>
+<li>LCD projectors and Highlighter will be provided during presentation.</li>
+<li>The presentation time for one paper is <b>15 mins</b> and for queries is 5 mins.</li>
+<li>Parcipants are required to send their abstract along with details of team members to <span class = "highlight">Arcvil1.0@gmail.com</span></li>
+<li>The last date for submission of abstract is <b>29/10/2018</b></li>
+</ul>
+					</p>
+				</div>
+
+			<!--	
+				<div class="overlay__item" id="preview-7">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/original/8.jpg" alt="Some image"/>
+						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">Red</span></h3>
+						<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Life</span></h4>
+					</div>
+					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+				</div>
+				<div class="overlay__item" id="preview-8">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/original/9.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Jack</span></h3>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner">Bust</span></h4>
+						<div class="box__deco">&#10108;</div>
+					</div>
+					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+				</div>
+				<div class="overlay__item" id="preview-9">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/original/10.jpg" alt="Some image"/>
+						<h3 class="box__title"><span class="box__title-inner">Wild</span></h3>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner">Zack</span></h4>
+					</div>
+					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+				</div>
+				<div class="overlay__item" id="preview-10">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/original/11.jpg" alt="Some image"/>
+						<h3 class="box__title box__title--bottom"><span class="box__title-inner">Lost</span></h3>
+						<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Rust</span></h4>
+					</div>
+					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+				</div>
+				<div class="overlay__item" id="preview-11">
+					<div class="box">
+						<div class="box__shadow"></div>
+						<img class="box__img box__img--original" src="img/original/12.jpg" alt="Some image"/>
+						<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner">Grit</span></h3>
+						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Mud</span></h4>
+						<div class="box__deco box__deco--top">&#10153;</div>
+					</div>
+					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+				</div>
+			-->
+				<button class="overlay__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+			</div>
+
+			</main>
+			<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+		</section>
+<marquee><a href="ktupoints.pdf" download >For more information on Activity Points,<span class="important"> Click here</span></a></marquee>
+  <!----------------------------------------------------------------------------------------------------
+  	----------------------------------------------------------------------------------------------------- -->
+    
+    <section  class="about_body" id="about">
+    	<br>
+    	<h2 class="about_head">About us</h2>
+
+    	<div class="about_content">
+    		<h4><b>WELCOME TO SREE NARAYANA GURU COLLEGE OF ENGINEERING AND TECHNOLOGY</b></h4>
+	        Sree Narayana Guru College of Engineering & Technology, one of the prestigious technical institutions in North Malabar, was established in 2003. The engineering college is fully equipped to meet the rising demands for greater facilities in the scenario of higher education. Since its inception, it has been true to do the mission and the prophetic vision of the great Saint Sree Narayana Guru. With its emphasis on quality education augmented by exposure and training in other individual skills, the institute's focus is on creating individuals who are allround performers and true professionals.
+	    </div>
+
+	    <div class="about_content">
+    		<h4><span class="asteric">ARCVIL 1.0</span></h4>
+	        ARCVIL 1.0 is a techfest organised by CESA of Sree Narayana Guru Collage of Engineering and Technology, Payyannur, on 1<sup>st</sup> and 2<sup>nd</sup> November, 2018. ARCVIL 1.0 offers a diverse range of Competitions, Seminar and Interesting Games. The sole idea of ARCVIl 1.0 is to present a platform for the Civil Engineering students to exhibit, explore and excel in the arena of Civil Engineering.
+	    </div>
+        <div id="tr-slide-container">
+
+
+		  <img class="single-slide" src="Images/img6.jpg" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img1.jpg" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img7.jpg" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img2.jpg" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img3.jpg" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img4.jpg" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img5.jpg" style="width:100%" alt="LOADING">
+		  
+		  <!--
+		  <img class="single-slide" src="Images/img%20(7).jpg" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img%20(8).html" style="width:100%" alt="LOADING">
+		  <img class="single-slide" src="Images/img%20(9).html" style="width:100%" alt="LOADING">
+		 -->
+
+
+		  
+		</div>
+		
+    </section>
+
+
+    
+<section id="tr-contact-wrapper">
+		<section id="tr-connect-with-us">
+			<span>CONNECT with US</span>
+			<ul id="tr-social">				
+				<li><a class="google" href="mailto:arcvil1.0@gmail.com" data-rel="external"><i class="fa fa-google" style= "font-weight: 100;"></i></a></li>		<li><a class="whatsapp" href="https://chat.whatsapp.com/LiCXQcp5NcU0LvwiZNpKmC" ><i class="fa fa-whatsapp" aria-hidden="true" style= "font-weight: bold;font-size: 1.17em;"></i></a></li>
+				<li><a href="https://instagram.com/arcvil_1.0" class="instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"
+				style= "font-weight:600;font-size: 1.15em;"></i></a></li> 
+				<li><a href="tel:+918136878710" class="phone"><i class="fa fa-phone"></i></a></li>
+			</ul>
+		</section>
+  		<section id="tr-contact-details">
+			<div class="contact">
+				<ul id="tr-contacts">
+					<li class="single-contact">
+						<div class="photo">
+							 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+								 width="128.000000pt" height="128.000000pt" viewBox="0 0 128.000000 128.000000"
+								 preserveAspectRatio="xMidYMid meet">
+								<g class="user-male" transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+									fill="#D50000" stroke="none">
+									<path d="M555 1268 c-63 -17 -140 -73 -179 -132 -125 -188 -20 -441 202 -487
+									220 -46 419 153 373 373 -37 181 -217 292 -396 246z"/>
+									<path d="M229 663 c-95 -49 -150 -162 -169 -349 -10 -92 -2 -172 19 -213 18
+									-32 79 -80 118 -90 51 -15 835 -15 886 0 39 10 100 58 118 90 21 41 29 121 19
+									213 -19 187 -74 300 -169 349 -75 37 -109 35 -189 -13 -156 -94 -288 -94 -444
+									0 -80 48 -114 50 -189 13z"/>
+								</g>
+							</svg>
+						</div>
+						<div class="details">
+							<div class="text">
+								<h3>Prof. Akhil V</h3>
+								<h5>Staff Coordinator</h5>
+								<h5>
+								<i class="fa fa-phone"> +919400869265</i>
+								</h5>
+							</div>
+						</div>
+					</li>
+					<li class="single-contact">
+						<div class="photo">
+							 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+								 width="128.000000pt" height="128.000000pt" viewBox="0 0 128.000000 128.000000"
+								 preserveAspectRatio="xMidYMid meet">
+								<g class="user-male" transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+									fill="#D50000" stroke="none">
+									<path d="M555 1268 c-63 -17 -140 -73 -179 -132 -125 -188 -20 -441 202 -487
+									220 -46 419 153 373 373 -37 181 -217 292 -396 246z"/>
+									<path d="M229 663 c-95 -49 -150 -162 -169 -349 -10 -92 -2 -172 19 -213 18
+									-32 79 -80 118 -90 51 -15 835 -15 886 0 39 10 100 58 118 90 21 41 29 121 19
+									213 -19 187 -74 300 -169 349 -75 37 -109 35 -189 -13 -156 -94 -288 -94 -444
+									0 -80 48 -114 50 -189 13z"/>
+								</g>
+							</svg>
+						</div>
+						<div class="details">
+							<div class="text">
+								<h3>Prof. Athira B krishnan</h3>
+								<h5>Staff Coordinator</h5>
+								<h5>
+								<i class="fa fa-phone"> +919544802220</i>
+								</h5>
+							</div>
+						</div>
+					</li>
+					<li class="single-contact">
+						<div class="photo">
+							 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+								 width="128.000000pt" height="128.000000pt" viewBox="0 0 128.000000 128.000000"
+								 preserveAspectRatio="xMidYMid meet">
+								<g class="user-male" transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+									fill="#000000" stroke="none">
+									<path d="M555 1268 c-63 -17 -140 -73 -179 -132 -125 -188 -20 -441 202 -487
+									220 -46 419 153 373 373 -37 181 -217 292 -396 246z"/>
+									<path d="M229 663 c-95 -49 -150 -162 -169 -349 -10 -92 -2 -172 19 -213 18
+									-32 79 -80 118 -90 51 -15 835 -15 886 0 39 10 100 58 118 90 21 41 29 121 19
+									213 -19 187 -74 300 -169 349 -75 37 -109 35 -189 -13 -156 -94 -288 -94 -444
+									0 -80 48 -114 50 -189 13z"/>
+								</g>
+							</svg>
+						</div>
+						<div class="details">
+							<div class="text">
+								<h3>Ayushraj P P</h3>
+								<h5>Event co-ordinator</h5>
+								<h5>
+								<i class="fa fa-phone"> +918129331137</i>
+								</h5>
+							</div>
+						</div>
+					</li>
+
+					<li class="single-contact">
+						<div class="photo">
+							 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+								 width="128.000000pt" height="128.000000pt" viewBox="0 0 128.000000 128.000000"
+								 preserveAspectRatio="xMidYMid meet">
+								<g class="user-male" transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+									fill="#000000" stroke="none">
+									<path d="M555 1268 c-63 -17 -140 -73 -179 -132 -125 -188 -20 -441 202 -487
+									220 -46 419 153 373 373 -37 181 -217 292 -396 246z"/>
+									<path d="M229 663 c-95 -49 -150 -162 -169 -349 -10 -92 -2 -172 19 -213 18
+									-32 79 -80 118 -90 51 -15 835 -15 886 0 39 10 100 58 118 90 21 41 29 121 19
+									213 -19 187 -74 300 -169 349 -75 37 -109 35 -189 -13 -156 -94 -288 -94 -444
+									0 -80 48 -114 50 -189 13z"/>
+								</g>
+							</svg>
+						</div>
+						<div class="details">
+							<div class="text">
+								<h3>Sahada V P</h3>
+								<h5>Event co-ordinator</h5>
+								<h5>
+								<i class="fa fa-phone"> +918136878710</i>
+								</h5>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+			<a class="map" href="https://goo.gl/maps/CmPCayGgv542">
+				<div id="map">
+					
+				</div>
+			</a>
+		</section>
+    </section>
+    <footer id="tr-footer">
+   			<p>&copy; Arcvil 1.0</p>
+   	</footer>
+   
+</body>
+
+</html>
